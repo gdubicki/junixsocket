@@ -18,8 +18,12 @@ This fork has been made to update junixsocket for https://github.com/grzegorz-du
 
 ## Building
 
-Tested & working on Ubuntu 12.04 LTS 64-bit with Oracle JDK 1.6.0_45 64-bit, Ant 1.9.3, gcc 4.6.3 and glibc 2.15.
+Tested & working on:
+* Ubuntu 12.04 LTS 64-bit with gcc 4.6.3 and glibc 2.15,
+* Oracle JDK 1.6.0_45 64-bit *from PPA - http://www.webupd8.org/2012/11/oracle-sun-java-6-installer-available.html*
+* Apache Ant 1.9.3 *from .tar.gz - http://ant.apache.org/bindownload.cgi*
 
+How-to:
 1. Install JDK 1.6 & set JAVA_HOME
 2. Download Ant, unpack and set ANT_HOME to its dir & add $ANT_HOME/bin to PATH
 3. Build with `ant -Dskip32=true` . This should end with "BUILD SUCCESSFUL".
