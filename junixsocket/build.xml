@@ -24,14 +24,15 @@
 	<property name="app.title" value="junixsocket library" />
 	<property name="app.version" value="1.4" />
 	<property name="app.nativeversion" value="1.4" />
-	<property name="app.javaversion" value="1.5" />
+	<property name="app.javaversion" value="1.6" />
 	<property name="app.dir" value="." />
 
 	<property name="compile.debug" value="on" />
 	<property name="compile.deprecation" value="false" />
 	<property name="compile.optimize" value="true" />
 
-	<property name="junit4.jar" value="/usr/share/java/junit4.jar" />
+	<property name="junit4.jar" value="./lib/junit-4.11.jar" />
+	<property name="hamcrest-core.jar" value="./lib/hamcrest-core-1.3.jar" />
 
 	<condition property="isMac">
 		<equals arg1="${os.name}" arg2="Mac OS X" />
@@ -109,6 +110,7 @@
 	<path id="classpath.test">
 		<path refid="classpath.mainRmi" />
 		<pathelement path="${junit4.jar}" />
+		<pathelement path="${hamcrest-core.jar}" />
 		<fileset dir="${dist.dir}">
 			<include name="${app.name}-native-*.jar"/>
 		</fileset>
@@ -126,11 +128,11 @@
 	</target>
 
 	<target name="compile" depends="init">
-		<javac srcdir="${src.main}" destdir="${build.main}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" />
-		<javac srcdir="${src.rmi}" destdir="${build.rmi}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.main" />
-		<javac srcdir="${src.mysql}" destdir="${build.mysql}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.main" />
-		<javac srcdir="${src.demo}" destdir="${build.demo}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.mainRmi" />
-		<javac srcdir="${src.test}" destdir="${build.test}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.test" />
+		<javac includeantruntime="false" srcdir="${src.main}" destdir="${build.main}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" />
+		<javac includeantruntime="false" srcdir="${src.rmi}" destdir="${build.rmi}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.main" />
+		<javac includeantruntime="false" srcdir="${src.mysql}" destdir="${build.mysql}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.main" />
+		<javac includeantruntime="false" srcdir="${src.demo}" destdir="${build.demo}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.mainRmi" />
+		<javac includeantruntime="false" srcdir="${src.test}" destdir="${build.test}" encoding="UTF-8" source="${app.javaversion}" target="${app.javaversion}" debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" classpathref="classpath.test" />
 	</target>
 
 	<target name="javah">
