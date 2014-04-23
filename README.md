@@ -11,6 +11,11 @@ This fork has been made to update junixsocket for https://github.com/grzegorz-du
 * Updated to Java 1.6
 * Minor fixes to make build process easier
 
+
+## Status
+
+*Building and tests passing, but not (yet) tested in production!*
+
 ## Building
 
 Tested & working on Ubuntu 12.04 LTS 64-bit with Oracle JDK 1.6.0_45 64-bit, Ant 1.9.3, gcc 4.6.3 and glibc 2.15.
