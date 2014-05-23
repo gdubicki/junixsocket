@@ -28,8 +28,9 @@ How-to:
 
 1. Install JDK 1.6 & set JAVA_HOME
 2. Download Ant, unpack and set ANT_HOME to its dir & add $ANT_HOME/bin to PATH
-3. Build with `ant -Dskip32=true` . This should end with "BUILD SUCCESSFUL".
-4. Find built JARs in ./build dir.
+3. Install some basic linux native compiling tools - gcc, g++, make etc.
+4. Build with `ant -Dskip32=true` . This should end with "BUILD SUCCESSFUL".
+5. Find built JARs in ./build dir.
 
 ## Thanks
 
