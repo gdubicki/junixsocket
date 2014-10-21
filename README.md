@@ -18,7 +18,7 @@ This fork has been made to update junixsocket for https://github.com/grzegorz-du
 
 ## Building
 
-Tested & working on:
+Requirements, or rather: tested & working on:
 
 * Ubuntu 12.04 LTS 64-bit with gcc 4.6.3 and glibc 2.15,
 * Oracle JDK 1.6.0_45 64-bit *from PPA - http://www.webupd8.org/2012/11/oracle-sun-java-6-installer-available.html*
@@ -32,9 +32,14 @@ How-to:
 4. Build with `ant -Dskip32=true` . This should end with "BUILD SUCCESSFUL".
 5. Find built JARs in ./build dir.
 
+## Upstream source
+
+* SVN - http://junixsocket.googlecode.com/svn/trunk/
+
 ## Thanks
 
 Thanks to:
 
 * Dr Christian Kohlschütter, author of junixsocket
 * anonymous (?) authors of http://svn2github.com/ tool
+
