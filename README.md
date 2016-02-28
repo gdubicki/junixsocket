@@ -40,6 +40,6 @@ How-to:
 
 Thanks to:
 
-* Dr Christian Kohlschütter, author of junixsocket
-* anonymous (?) authors of http://svn2github.com/ tool
+* [Dr Christian Kohlschütter](http://www.kohlschutter.com/en/), author of junixsocket
+* [Piotr Gabryjeluk](http://piotr.gabryjeluk.pl), author of http://svn2github.com/ tool
 
