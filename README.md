@@ -1,3 +1,10 @@
+# THIS REPO IS VERY OUTDATED. DO NOT USE
+
+Check out other junixsocket forks instead. For the ones I currently recommend see: http://stackoverflow.com/a/42874384/2693875
+
+---
+
+
 # junixsocket "pre-1.4" fork
 
 
